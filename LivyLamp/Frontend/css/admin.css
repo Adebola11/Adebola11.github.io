@@ -1,0 +1,152 @@
+/* ============================================================
+   LivyLamp — Admin Stylesheet
+   Styles specific to the admin dashboard.
+   Theme: Warm Minimalist Glow (dark)
+   ============================================================ */
+
+/* ============ ADMIN STATS ============ */
+.admin-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 140px;
+  background: var(--secondary);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+  border: 1px solid rgba(245, 230, 202, 0.1);
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  border-color: rgba(255, 179, 71, 0.25);
+  box-shadow: 0 0 20px rgba(255, 179, 71, 0.08);
+}
+
+.stat-card__value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-card__label {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  margin-top: 0.25rem;
+}
+
+/* ============ ADMIN SECTIONS ============ */
+.admin-section {
+  margin-bottom: 2rem;
+}
+
+.admin-section__title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+/* ============ ADMIN FORM ============ */
+.admin-form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ============ DATA TABLES ============ */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.data-table thead tr {
+  border-bottom: 1px solid rgba(245, 230, 202, 0.1);
+  text-align: left;
+}
+
+.data-table th {
+  padding: 0.75rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-foreground);
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.2s;
+}
+
+.data-table tbody tr:hover {
+  background: rgba(255, 179, 71, 0.05);
+}
+
+.table-cell {
+  padding: 0.75rem 0.5rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+
+.table-cell--muted {
+  color: var(--muted-foreground);
+  font-size: 0.8rem;
+}
+
+/* ============ STATUS BADGE ============ */
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-badge--pending {
+  background: rgba(255, 179, 71, 0.15);
+  color: #FFB347;
+}
+
+.status-badge--completed {
+  background: rgba(74, 222, 128, 0.12);
+  color: #4ade80;
+}
+
+.status-badge--cancelled {
+  background: rgba(248, 113, 113, 0.12);
+  color: #f87171;
+}
+
+/* ============ DANGER BUTTON ============ */
+.btn-danger-sm {
+  background: none;
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  color: #f87171;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-danger-sm:hover {
+  background: rgba(248, 113, 113, 0.12);
+  border-color: #f87171;
+  color: #fca5a5;
+  box-shadow: 0 0 12px rgba(248, 113, 113, 0.15);
+}
