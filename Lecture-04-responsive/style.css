@@ -1,0 +1,260 @@
+/* ==========================================
+   Lecture 04 - Responsive + JavaScript
+   ========================================== */
+
+/* CSS Variables for theming */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --header-bg: #f4f4f4;
+  --accent-color: #4caf50;
+  --card-bg: #fafafa;
+  --border-color: #dddddd;
+  --btn-bg: #4caf50;
+  --btn-text: #ffffff;
+}
+
+/* Dark mode variables */
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --header-bg: #2d2d2d;
+  --accent-color: #66bb6a;
+  --card-bg: #2d2d2d;
+  --border-color: #444444;
+  --btn-bg: #66bb6a;
+  --btn-text: #1a1a1a;
+}
+
+/* Apply variables */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: #ffffff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Theme toggle button */
+.theme-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+  transition: all 0.3s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Header and footer */
+header,
+footer {
+  background-color: var(--header-bg);
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+
+/* Greeting display */
+.greeting {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Main content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+article {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+article:last-child {
+  border-bottom: none;
+}
+
+/* Counter and contact sections */
+.counter-section,
+.contact-section {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid var(--border-color);
+  transition: background-color 0.3s;
+}
+
+#clickCount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+/* Action buttons */
+.action-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ID selectors */
+#main {
+  scroll-margin-top: 20px;
+}
+
+#portfolio-heading {
+  color: var(--text-color);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.dark-mode nav a {
+  color: #66bb6a;
+}
+
+/* Pseudo-classes */
+a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+.dark-mode a:hover {
+  color: #81c784;
+}
+
+nav a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+/* Responsive images */
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+figcaption {
+  font-style: italic;
+  color: var(--text-color);
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+ul {
+  line-height: 1.6;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
